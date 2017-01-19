@@ -30,7 +30,7 @@ def GetFiles(dirs):
 def RenameFile(file,ext=""):
     global names
     randomName=random.choice(names)
-    newName=str(randomName[:-2])+ext
+    newName=str(randomName[:-1])+ext
     try:
         os.rename(file,newName)
     except OSError:
